@@ -1,0 +1,232 @@
+@charset "UTF-8";
+
+/* ========= HEADER ========= */
+
+header{
+    background:var(--light-pink);
+    padding:20px 0;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* ========= LOGO ========= */
+
+.logo{
+    width:220px;
+    height:auto;
+}
+
+/* ========= NAVIGATION ========= */
+
+nav ul{
+    display:flex;
+    gap:42px;
+}
+
+nav a{
+    color:var(--text);
+    font-size:16px;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--pink);
+}
+/* ==========================
+   Global Styles
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF9FC;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* ==========================
+   Resume Section
+========================== */
+
+.resume {
+    max-width: 1200px;
+    margin: 70px auto;
+    padding: 20px;
+}
+
+/* ==========================
+   Header
+========================== */
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.resume-header h1 {
+    font-size: 3.5rem;
+    color: #FF7CB8;
+    margin-bottom: 15px;
+}
+
+.resume-header p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+.resume-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    background: #FF7CB8;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #ff63ad;
+    transform: translateY(-3px);
+}
+
+.secondary {
+    background: #fff;
+    color: #FF7CB8;
+    border: 2px solid #FF7CB8;
+}
+
+.secondary:hover {
+    background: #FFEAF4;
+}
+
+/* ==========================
+   Resume Grid
+========================== */
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* ==========================
+   Cards
+========================== */
+
+.resume-card {
+    background: #fff;
+    border: 2px solid #FFE2EF;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.resume-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.resume-card h2 {
+    color: #FF7CB8;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #FFE2EF;
+    padding-bottom: 10px;
+}
+
+.resume-card h3 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    font-size: 1.15rem;
+}
+
+.resume-card p {
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.resume-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resume-card li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+}
+
+.resume-card li::before {
+    content: "✔";
+    color: #FF7CB8;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 900px) {
+
+    .resume-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-header h1 {
+        font-size: 2.8rem;
+    }
+
+    .resume {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .resume-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .resume-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 220px;
+        text-align: center;
+    }
+
+    .resume-card {
+        padding: 25px;
+    }
+}
